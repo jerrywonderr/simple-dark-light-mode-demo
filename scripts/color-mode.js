@@ -4,7 +4,7 @@
  */
 const setColorMode = () => {
   const colorMode = localStorage.getItem("mode");
-  const href = colorMode === "dark" ? "/styles/dark-mode.css" : "/styles/light-mode.css";
+  const href = colorMode === "dark" ? "styles/dark-mode.css" : "styles/light-mode.css";
   const link = document.getElementById("stylesheet");
   link.setAttribute("href", href);
 }
