@@ -6,8 +6,7 @@ const setColorMode = () => {
   const colorMode = localStorage.getItem("mode");
   const href = colorMode === "dark" ? "/styles/dark-mode.css" : "/styles/light-mode.css";
   const link = document.getElementById("stylesheet");
-  link.setAttribute("href", href)
-  console.log(href)
+  link.setAttribute("href", href);
 }
 
 /**
@@ -16,18 +15,18 @@ const setColorMode = () => {
  */
 const toggleColorMode = () => {
   const colorMode = localStorage.getItem("mode");
-  const mode = colorMode === "dark" ? "light" : "dark"
-  localStorage.setItem("mode", mode)
-  location.reload()
+  const mode = colorMode === "dark" ? "light" : "dark";
+  localStorage.setItem("mode", mode);
+  location.reload();
 }
 
 window.onload = () => {
   setColorMode(); // Set the color mode on load
 
-  const toggleBtn = document.getElementById("toggleBtn")
+  const toggleBtn = document.getElementById("toggleBtn");
   if (toggleBtn) {
     // The toggle button is not on all pages
     // this checks if the button is present before adding the event listener
-    toggleBtn.addEventListener("click", toggleColorMode)
+    toggleBtn.addEventListener("click", toggleColorMode);
   }
 }
